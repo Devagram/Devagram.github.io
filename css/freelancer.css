@@ -175,13 +175,24 @@ header.masthead {
   header.masthead img {
     display: block;
     margin: 0 auto 20px; }
-  header.masthead .intro-text .name {
+  header.masthead .intro-text .namel {
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 2em;
     font-weight: 700;
-    display: block;
+    display: inline-block;
     color: #225560;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    animation-duration: 3s;
+    animation-name: slideinright; }
+    header.masthead .intro-text .namer {
+      font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 2em;
+      font-weight: 700;
+      display: inline-block;
+      color: #225560;
+      text-transform: uppercase;
+      animation-duration: 3s;
+      animation-name: slideinleft; }
   header.masthead .intro-text .skills {
     font-size: 1.25em;
     font-weight: 300;
@@ -459,3 +470,40 @@ footer {
 .btn:active,
 .btn:focus {
   outline: none; }
+
+
+@keyframes slideinright {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes slideinleft {
+  from {
+    margin-left: -100%;
+    width: -300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: -100%;
+  }
+}
+
+header.masthead .intro-text .item
+{
+    width:50px;
+    height:50px;
+    margin:0;
+    padding:0;
+    display:inline-block;
+    position:relative;
+    background:lime;
+    cursor:pointer;
+}

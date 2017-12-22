@@ -1,4 +1,11 @@
+
+$("header.masthead .intro-text .con .item").click(function() {
+  $('.kill').hide("slow");
+});
+
 (function($) {
+
+
   "use strict"; // Start of use strict
 
   // Smooth scrolling using jQuery easing
@@ -14,6 +21,7 @@
       }
     }
   });
+
 
   // Closes responsive menu when a scroll trigger link is clicked
   $('.js-scroll-trigger').click(function() {
@@ -49,5 +57,7 @@
       $(this).removeClass("floating-label-form-group-with-focus");
     });
   });
+
+
 
 })(jQuery); // End of use strict
